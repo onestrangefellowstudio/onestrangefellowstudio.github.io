@@ -1,0 +1,104 @@
+:root {
+  --night: #0b1e5b;
+  --night-deep: #06123a;
+  --moon: #cfe0ff;
+  --ink: #eef3ff;
+  --muted: #a9b8de;
+  --sand: #e8a94a;
+  --card: rgba(255, 255, 255, 0.06);
+  --line: rgba(255, 255, 255, 0.14);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Nunito", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 78% 16%, rgba(207, 224, 255, 0.55) 0 70px, transparent 71px),
+    radial-gradient(circle at 70% 28%, rgba(120, 160, 255, 0.35) 0 120px, transparent 121px),
+    radial-gradient(ellipse at 50% 0%, #1b4fd8 0%, var(--night) 45%, var(--night-deep) 100%);
+  background-attachment: fixed;
+  line-height: 1.6;
+}
+
+a { color: var(--moon); }
+a:hover { color: #fff; }
+
+.wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 48px 20px 64px;
+}
+
+header.studio h1 {
+  font-size: clamp(2rem, 6vw, 3rem);
+  letter-spacing: 0.02em;
+  margin: 24px 0 8px;
+}
+
+header.studio p {
+  color: var(--muted);
+  font-size: 1.1rem;
+  margin: 0 0 40px;
+  max-width: 520px;
+}
+
+.accent { color: var(--sand); }
+
+.games {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.game {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 20px;
+  backdrop-filter: blur(4px);
+}
+
+.game img, .game .icon {
+  width: 88px;
+  height: 88px;
+  border-radius: 20px;
+  display: block;
+  margin-bottom: 14px;
+}
+
+.game .icon {
+  background: linear-gradient(135deg, #f08a3c, #e85d3a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.6rem;
+}
+
+.game h2 { margin: 0 0 6px; font-size: 1.3rem; }
+.game p { margin: 0 0 14px; color: var(--muted); }
+.game .links a { margin-right: 14px; font-weight: 600; }
+
+footer {
+  margin-top: 56px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* policy pages */
+.policy {
+  background: rgba(6, 18, 58, 0.72);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 28px 24px;
+}
+
+.policy h1 { margin-top: 0; font-size: 1.8rem; }
+.policy h2 { font-size: 1.2rem; margin-top: 28px; }
+.policy .updated { color: var(--muted); margin-top: -8px; }
+.back { display: inline-block; margin-bottom: 20px; }
